@@ -8,19 +8,19 @@ class MenuItems {
 
   const MenuItems({required this.title, required this.subTitle, required this.link, required this.icon});
 
-  static const appMenuItems = <MenuItems> [
-    MenuItems(
-      title: 'Botones',
-      subTitle: 'Personalizaciones de botones en flutter',
-      link: '/bottons',
-      icon: Icons.smart_button_outlined,
-    ),
-    MenuItems(
-      title: 'Tarjetas',
-      subTitle: 'Contenedor de tarjetas en flutter',
-      link: '/bottons',
-      icon: Icons.smart_button_outlined,
-    ),
-  ];
-
 }
+
+const appMenuItems = <MenuItems> [
+  MenuItems(
+    title: 'Botones',
+    subTitle: 'Personalizaciones de botones en flutter',
+    link: '/buttons',
+    icon: Icons.smart_button_outlined,
+  ),
+  MenuItems(
+    title: 'Tarjetas',
+    subTitle: 'Contenedor de tarjetas en flutter',
+    link: '/carts',
+    icon: Icons.smart_button_outlined,
+  ),
+];
