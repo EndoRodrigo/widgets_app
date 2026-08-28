@@ -6,9 +6,9 @@ class MenuItems {
   final String link;
   final IconData icon;
 
-  MenuItems({required this.title, required this.subTitle, required this.link, required this.icon});
+  const MenuItems({required this.title, required this.subTitle, required this.link, required this.icon});
 
-  final appMenuItems = <MenuItems> [
+  static const appMenuItems = <MenuItems> [
     MenuItems(
       title: 'Botones',
       subTitle: 'Personalizaciones de botones en flutter',
