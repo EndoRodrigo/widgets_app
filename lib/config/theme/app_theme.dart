@@ -13,6 +13,7 @@ class AppTheme {
       useMaterial3: true,
       colorSchemeSeed: _colorThemes[selectedColor],
 
+
     );
   }
 }
