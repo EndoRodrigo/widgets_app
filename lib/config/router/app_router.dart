@@ -20,8 +20,8 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/carts',
-      name: CartsScreams.name,
-      builder: (context, state) => const CartsScreams(),
+      name: CardsScreen.name,
+      builder: (context, state) => const CardsScreen(),
     ),
   ],
 );
