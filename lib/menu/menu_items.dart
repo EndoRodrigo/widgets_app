@@ -23,4 +23,10 @@ const appMenuItems = <MenuItems> [
     link: '/carts',
     icon: Icons.smart_button_outlined,
   ),
+  MenuItems(
+    title: 'ProgressIndicator',
+    subTitle: 'spinner de carga fluter',
+    link: '/progress',
+    icon: Icons.refresh_rounded,
+  ),
 ];

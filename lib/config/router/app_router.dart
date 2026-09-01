@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/scream/Sppiner/ProgressScream.dart';
 import 'package:widgets_app/presentation/scream/buttons/buttons_scream.dart';
 import 'package:widgets_app/presentation/scream/carts/carts_screams.dart';
 import 'package:widgets_app/presentation/scream/home/home_screams.dart';
@@ -22,6 +23,11 @@ final appRouter = GoRouter(
       path: '/carts',
       name: CardsScreen.name,
       builder: (context, state) => const CardsScreen(),
+    ),
+    GoRoute(
+      path: '/progress',
+      name: Progressscream.name,
+      builder: (context, state) => const Progressscream(),
     ),
   ],
 );
