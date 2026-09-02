@@ -5,6 +5,7 @@ import 'package:widgets_app/presentation/scream/Sppiner/ProgressScream.dart';
 import 'package:widgets_app/presentation/scream/buttons/buttons_scream.dart';
 import 'package:widgets_app/presentation/scream/carts/carts_screams.dart';
 import 'package:widgets_app/presentation/scream/home/home_screams.dart';
+import 'package:widgets_app/presentation/scream/snackbar/snackbar_scream.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -28,6 +29,11 @@ final appRouter = GoRouter(
       path: '/progress',
       name: ProgressScreen.name,
       builder: (context, state) => const ProgressScreen(),
+    ),
+    GoRoute(
+      path: '/snack',
+      name: SnackbarScream.name,
+      builder: (context, state) => const SnackbarScream(),
     ),
   ],
 );
