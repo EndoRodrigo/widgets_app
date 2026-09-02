@@ -26,8 +26,8 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/progress',
-      name: Progressscream.name,
-      builder: (context, state) => const Progressscream(),
+      name: ProgressScreen.name,
+      builder: (context, state) => const ProgressScreen(),
     ),
   ],
 );

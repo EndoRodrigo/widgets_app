@@ -1,61 +1,69 @@
 import 'package:flutter/material.dart';
 
-class Progressscream extends StatelessWidget {
-  static const String name = 'Progress';
+class ProgressScreen extends StatelessWidget {
+  static const name = 'progress_screen';
 
-  const Progressscream({super.key});
+  const ProgressScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Preogress Indicator')),
-      body: _ProgressView(),
+      appBar: AppBar(title: const Text('Progress Indicators')),
+      body: const _ProgressView(),
     );
   }
 }
 
 class _ProgressView extends StatelessWidget {
-  const _ProgressView({super.key});
+  const _ProgressView();
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        children: [
-          Text('Circular progress indicator'),
-          CircularProgressIndicator(strokeWidth: 2),
-          SizedBox(height: 50),
+        children: const [
+          SizedBox(height: 30),
+          Text('Circula progress indicator'),
+          SizedBox(height: 10),
+          CircularProgressIndicator(
+            strokeWidth: 2,
+            backgroundColor: Colors.black45,
+          ),
 
-          Text('Circular progress indicator controlado'),
-          _ControllerProgresIndicator(),
-          SizedBox(height: 50),
+          SizedBox(height: 20),
+          Text('Circular y Linear controlado'),
+          SizedBox(height: 10),
+          _ControlledProgresIndicator(),
         ],
       ),
     );
   }
 }
 
-class _ControllerProgresIndicator extends StatelessWidget {
-  const _ControllerProgresIndicator({super.key});
+class _ControlledProgresIndicator extends StatelessWidget {
+  const _ControlledProgresIndicator();
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: Stream.periodic(Duration(milliseconds: 300), (value) {
-        return (value * 2) / 100; //1.0, 1.1
+      stream: Stream.periodic(const Duration(milliseconds: 300), (value) {
+        return (value * 2) / 100; // 0.0, 1.0
       }).takeWhile((value) => value < 100),
       builder: (context, snapshot) {
-        final progressValue= snapshot.data ?? 0;
+        final progressValue = snapshot.data ?? 0;
 
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircularProgressIndicator(value: progressValue,
+              CircularProgressIndicator(
+                value: progressValue,
                 strokeWidth: 2,
-                backgroundColor: Colors.black45,
+                backgroundColor: Colors.black12,
               ),
-              SizedBox(child: Expanded(child: LinearProgressIndicator(value: progressValue,))),
+              const SizedBox(width: 20),
+              Expanded(child: LinearProgressIndicator(value: progressValue)),
             ],
           ),
         );
