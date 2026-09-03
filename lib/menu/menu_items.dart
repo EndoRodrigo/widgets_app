@@ -45,4 +45,10 @@ const appMenuItems = <MenuItems>[
     link: '/animated',
     icon: Icons.info_outline,
   ),
+  MenuItems(
+    title: 'Ux Control + tile',
+    subTitle: 'CheckBox Rdios or tile',
+    link: '/ux',
+    icon: Icons.check_box_rounded,
+  ),
 ];

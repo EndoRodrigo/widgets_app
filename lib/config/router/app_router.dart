@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/control/ui_controles.dart';
 import 'package:widgets_app/presentation/scream/Sppiner/ProgressScream.dart';
 import 'package:widgets_app/presentation/scream/animated/animated_screms.dart';
 import 'package:widgets_app/presentation/scream/buttons/buttons_scream.dart';
@@ -40,6 +41,11 @@ final appRouter = GoRouter(
       path: '/animated',
       name: AnimatedScrems.name,
       builder: (context, state) => const AnimatedScrems(),
+    ),
+    GoRoute(
+      path: '/ux',
+      name: UiControles.name,
+      builder: (context, state) => const UiControles(),
     ),
   ],
 );
