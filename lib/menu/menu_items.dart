@@ -39,4 +39,10 @@ const appMenuItems = <MenuItems>[
     link: '/snack',
     icon: Icons.info_outline,
   ),
+  MenuItems(
+    title: 'Animated container',
+    subTitle: 'Stafull widgest anited',
+    link: '/animated',
+    icon: Icons.info_outline,
+  ),
 ];
