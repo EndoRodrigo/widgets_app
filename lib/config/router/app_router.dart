@@ -6,6 +6,7 @@ import 'package:widgets_app/presentation/scream/animated/animated_screms.dart';
 import 'package:widgets_app/presentation/scream/buttons/buttons_scream.dart';
 import 'package:widgets_app/presentation/scream/carts/carts_screams.dart';
 import 'package:widgets_app/presentation/scream/home/home_screams.dart';
+import 'package:widgets_app/presentation/scream/scroll/scrol_infinity.dart';
 import 'package:widgets_app/presentation/scream/snackbar/snackbar_scream.dart';
 import 'package:widgets_app/presentation/scream/tutorial/tutorial_scream.dart';
 
@@ -53,6 +54,11 @@ final appRouter = GoRouter(
       path: '/tutorial',
       name: TutorialScream.name,
       builder: (context, state) => const TutorialScream(),
+    ),
+    GoRoute(
+      path: '/scroll',
+      name: ScrolInfinity.name,
+      builder: (context, state) => const ScrolInfinity(),
     ),
   ],
 );
