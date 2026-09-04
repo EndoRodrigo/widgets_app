@@ -51,4 +51,10 @@ const appMenuItems = <MenuItems>[
     link: '/ux',
     icon: Icons.check_box_rounded,
   ),
+  MenuItems(
+    title: 'Introduccion a la aplicacion',
+    subTitle: 'Pequeño tutoral a la aplicacion',
+    link: '/tutorial',
+    icon: Icons.accessibility_new,
+  ),
 ];

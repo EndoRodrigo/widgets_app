@@ -1,13 +1,15 @@
 import 'dart:io';
 
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/control/ui_controles.dart';
 import 'package:widgets_app/presentation/scream/Sppiner/ProgressScream.dart';
 import 'package:widgets_app/presentation/scream/animated/animated_screms.dart';
 import 'package:widgets_app/presentation/scream/buttons/buttons_scream.dart';
 import 'package:widgets_app/presentation/scream/carts/carts_screams.dart';
 import 'package:widgets_app/presentation/scream/home/home_screams.dart';
 import 'package:widgets_app/presentation/scream/snackbar/snackbar_scream.dart';
+import 'package:widgets_app/presentation/scream/tutorial/tutorial_scream.dart';
+
+import '../../presentation/scream/control/ui_controles.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -46,6 +48,11 @@ final appRouter = GoRouter(
       path: '/ux',
       name: UiControles.name,
       builder: (context, state) => const UiControles(),
+    ),
+    GoRoute(
+      path: '/tutorial',
+      name: TutorialScream.name,
+      builder: (context, state) => const TutorialScream(),
     ),
   ],
 );
