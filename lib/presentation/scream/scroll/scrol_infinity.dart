@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -33,10 +34,10 @@ class _ScrolInfinityState extends State<ScrolInfinity> {
   }
 
   Future<void> loadNextPage() async {
-    if(isLoading) return;
+    if (isLoading) return;
     isLoading = true;
     setState(() {});
-    await Future.delayed(Duration(seconds: 6));
+    await Future.delayed(Duration(seconds: 2));
     addFiveImages();
     isLoading = false;
     setState(() {});
@@ -67,7 +68,9 @@ class _ScrolInfinityState extends State<ScrolInfinity> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => context.pop(),
-        child: Icon(Icons.arrow_back_outlined),
+        child: isLoading
+            ? SpinPerfect(infinite: true, child: Icon(Icons.refresh_outlined))
+            : FadeIn(child: Icon(Icons.arrow_back_outlined)),
       ),
     );
   }
@@ -80,4 +83,3 @@ void addFiveImages() {
 
 List<int> imagesIds = [1, 2, 3, 4, 5];
 bool isLoading = false;
-
