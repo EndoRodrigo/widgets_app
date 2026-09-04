@@ -41,6 +41,7 @@ class _ScrolInfinityState extends State<ScrolInfinity> {
     addFiveImages();
     isLoading = false;
     setState(() {});
+    moveScrollButton();
   }
 
   Future<void> OnRefresh() async {
@@ -48,9 +49,21 @@ class _ScrolInfinityState extends State<ScrolInfinity> {
     final lastId = imagesIds.last;
     isLoading = true;
     imagesIds.clear();
-    imagesIds.add(lastId +1);
+    imagesIds.add(lastId + 1);
     addFiveImages();
     setState(() {});
+
+  }
+
+  void moveScrollButton() {
+    if (scrollController.position.pixels + 150 >=
+        scrollController.position.maxScrollExtent) return;
+
+    scrollController.animateTo(
+        scrollController.position.pixels + 120,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn
+    );
   }
 
   @override
