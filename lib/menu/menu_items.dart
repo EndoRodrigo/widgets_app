@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class MenuItems {
+class MenuItem {
   final String title;
   final String subTitle;
   final String link;
   final IconData icon;
 
-  const MenuItems({
+  const MenuItem({
     required this.title,
     required this.subTitle,
     required this.link,
@@ -14,53 +14,74 @@ class MenuItems {
   });
 }
 
-const appMenuItems = <MenuItems>[
-  MenuItems(
+const appMenuItems = <MenuItem>[
+  MenuItem(
+    title: 'Riverpod Counter',
+    subTitle: 'Introducción a riverpod',
+    link: '/counter-river',
+    icon: Icons.add,
+  ),
+
+  MenuItem(
     title: 'Botones',
-    subTitle: 'Personalizaciones de botones en flutter',
+    subTitle: 'Varios botones en Flutter',
     link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
-  MenuItems(
+
+  MenuItem(
     title: 'Tarjetas',
-    subTitle: 'Contenedor de tarjetas en flutter',
-    link: '/carts',
-    icon: Icons.smart_button_outlined,
+    subTitle: 'Un contenedor estilizado',
+    link: '/cards',
+    icon: Icons.credit_card,
   ),
-  MenuItems(
-    title: 'ProgressIndicator',
-    subTitle: 'spinner de carga fluter',
+
+  MenuItem(
+    title: 'Progress Indicators',
+    subTitle: 'Generales y controlados',
     link: '/progress',
     icon: Icons.refresh_rounded,
   ),
-  MenuItems(
-    title: 'SnackBar y dialogos',
-    subTitle: 'Widgets en la parte inferor de la panatalla',
-    link: '/snack',
+
+  MenuItem(
+    title: 'Snackbars y diálogos',
+    subTitle: 'Indicadores en pantalla',
+    link: '/snackbars',
     icon: Icons.info_outline,
   ),
-  MenuItems(
+
+  MenuItem(
     title: 'Animated container',
-    subTitle: 'Stafull widgest anited',
+    subTitle: 'Stateful widget animado',
     link: '/animated',
-    icon: Icons.info_outline,
+    icon: Icons.check_box_outline_blank_rounded,
   ),
-  MenuItems(
-    title: 'Ux Control + tile',
-    subTitle: 'CheckBox Rdios or tile',
-    link: '/ux',
-    icon: Icons.check_box_rounded,
+
+  MenuItem(
+    title: 'UI Controls + Tiles',
+    subTitle: 'Una serie de controles de Flutter',
+    link: '/ui-controls',
+    icon: Icons.car_rental_outlined,
   ),
-  MenuItems(
-    title: 'Introduccion a la aplicacion',
-    subTitle: 'Pequeño tutoral a la aplicacion',
+
+  MenuItem(
+    title: 'Introducción a la aplicación',
+    subTitle: 'Pequeño tutorial introductorio',
     link: '/tutorial',
-    icon: Icons.accessibility_new,
+    icon: Icons.accessible_rounded,
   ),
-  MenuItems(
-    title: 'Infinity scroll y pull',
-    subTitle: 'Listas infinitas',
-    link: '/scroll',
-    icon: Icons.checklist_rtl_sharp,
+
+  MenuItem(
+    title: 'InfiniteScroll y Pull',
+    subTitle: 'Listas infinitas y pull to refresh',
+    link: '/infinite',
+    icon: Icons.list_alt_rounded,
+  ),
+
+  MenuItem(
+    title: 'Cambiar tema',
+    subTitle: 'Cambiar tema de la aplicación',
+    link: '/theme-changer',
+    icon: Icons.color_lens_outlined,
   ),
 ];

@@ -11,14 +11,16 @@ import 'package:widgets_app/presentation/scream/snackbar/snackbar_scream.dart';
 import 'package:widgets_app/presentation/scream/tutorial/tutorial_scream.dart';
 
 import '../../presentation/scream/control/ui_controles.dart';
+import '../../presentation/scream/counter/counter_screen.dart';
+import '../../presentation/scream/theme_changer/theme_changer_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
-      name: HomeScreams.name,
-      builder: (context, state) => const HomeScreams(),
+      name: HomeScreen.name,
+      builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
       path: '/buttons',
@@ -59,6 +61,17 @@ final appRouter = GoRouter(
       path: '/scroll',
       name: ScrolInfinity.name,
       builder: (context, state) => const ScrolInfinity(),
+    ),
+    GoRoute(
+      path: '/counter-river',
+      name: CounterScreen.name,
+      builder: (context, state) => const CounterScreen(),
+    ),
+
+    GoRoute(
+      path: '/theme-changer',
+      name: ThemeChangerScreen.name,
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );
